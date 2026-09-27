@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Can removing CO2 cancel out the effects of emitting it? An interactive walkthrough of asymmetry in carbon cycle feedbacks under positive and negative CO2 emissions."
+  >
+
+  <title>
+    Can We Undo Carbon? | Chimuka & Zickfeld
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <main>
+
+
+    <!-- ============================================================
+         01 — THE QUESTION (HERO)
+         ============================================================ -->
+
+    <section class="panel panel-white" id="hero">
+
+      <div class="panel-copy hero-copy">
+
+        <h1>
+          What happens to climate and carbon stocks
+          <span class="accent">when CO₂ levels decline?</span>
+        </h1>
+
+        <p class="dek">
+          The climate-carbon cycle does not simply respond in reverse.
+        </p>
+
+        <p class="byline">Chimuka &amp; Zickfeld · Biogeosciences · 2026</p>
+
+      </div>
+
+      <div class="scroll-cue">↓ Scroll to explore</div>
+
+    </section>
+
+
+
+    <!-- ============================================================
+         02 — BACKGROUND I: EMITTING
+         ============================================================ -->
+
+    <section class="panel panel-grey reveal">
+      <div class="panel-copy">
+        <p class="kicker">For most of recent history</p>
+        <h2>we have added CO₂ to the atmosphere.</h2>
+      </div>
+    </section>
+
+
+
+    <!-- ============================================================
+         03 — BACKGROUND II: REMOVING
+         ============================================================ -->
+
+    <section class="panel panel-blue-light reveal">
+      <div class="panel-copy">
+        <p class="kicker">But pathways to limit warming below 1.5 or 2°C below preindustrial levels require</p>
+        <h2>removing CO₂ from the atmosphere.</h2>
+      </div>
+    </section>
+
+
+
+    <!-- ============================================================
+         04 — THE RESEARCH QUESTION
+         ============================================================ -->
+
+    <section class="panel panel-dark">
+
+      <div class="panel-copy typewriter-block reveal">
+        <p class="kicker kicker-light">So, an important question emerges</p>
+        <h2 class="typewriter" id="researchQuestion">
+          Can the impact of increasing CO₂ on the climate and carbon stocks be cancelled out by reducing CO₂ by the same amount?
+        </h2>
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================================================
+         05 — THE EXPERIMENT (setup + CO2 dual trace)
+         ============================================================ -->
+
+    <section class="content-panel reveal">
+      <p class="kicker">The experiment</p>
+      <h2>Let's choose a climate state to start from — say, 560 ppm of atmospheric CO₂.</h2>
+      <p class="body-copy">
+        Then change atmospheric CO₂ by the same magnitude,
+        symmetrically, in opposite directions.
+      </p>
+    </section>
+
+
+    <section class="scrolly layered-scrolly" id="co2Scrolly">
+
+      <div class="sticky-visual">
+
+        <p class="visual-label">Fig. — Atmospheric CO₂ trajectory (illustrative)</p>
+
+        <svg class="trace-svg" viewBox="0 0 1000 700" role="img" aria-label="Symmetric positive and negative CO2 trajectories">
+
+          <line x1="100" y1="350" x2="900" y2="350" class="axis-line" />
+
+          <text x="90" y="105" text-anchor="end" class="svg-tick">+280 ppm</text>
+          <text x="90" y="605" text-anchor="end" class="svg-tick">−280 ppm</text>
+
+          <path class="layer draw-path" data-layer="positive" d="M 500 350 C 590 320, 690 220, 840 100" />
+          <path class="layer draw-path negative-path" data-layer="negative" d="M 500 350 C 590 380, 690 480, 840 600" />
+
+          <circle cx="500" cy="350" r="6" class="start-point" />
+
+          <text x="500" y="325" text-anchor="middle" class="svg-label">Same starting state</text>
+
+          <text x="850" y="90" class="svg-label label-positive layer" data-layer="positive">+ CO₂</text>
+          <text x="850" y="622" class="svg-label label-negative layer" data-layer="negative">− CO₂</text>
+
+        </svg>
+
+        <p class="scrolly-caption" data-caption>Same starting state.</p>
+
+      </div>
+
+      <div class="scroll-steps">
+
+        <article class="scroll-step" data-step="0" data-show="" data-caption-text="Same starting state.">
+          <p class="step-number">a</p>
+          <h3>Begin from the same climate state.</h3>
+          <p>One starting point lets us compare the impact of CO₂ increase and decrease.</p>
+        </article>
+
+        <article class="scroll-step" data-step="1" data-show="positive" data-caption-text="Atmospheric CO₂ increases.">
+          <p class="step-number">b</p>
+          <h3>In one case, increase atmospheric CO₂.</h3>
+          <p>The positive trajectory moves toward higher atmospheric CO₂ concentrations.</p>
+        </article>
+
+        <article class="scroll-step" data-step="2" data-show="positive,negative" data-caption-text="Decreases by the same amount.">
+          <p class="step-number">c</p>
+          <h3>In the other, decrease it by the same amount.</h3>
+          <p>The negative trajectory changes atmospheric CO₂ by the same magnitude, the opposite direction.</p>
+        </article>
+
+        <article class="scroll-step" data-step="3" data-show="positive,negative" data-caption-text="A mirror-image test.">
+          <p class="step-number">d</p>
+          <h3>A mirror-image test.</h3>
+          <p>If the answer is "yes," climate and carbon-stock changes should mirror each other too.</p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+
+    <!-- ============================================================
+         06 — RESULT Ia: CLIMATE RESPONSE ASYMMETRY
+         ============================================================ -->
+
+    <section class="scrolly layered-scrolly" id="tempScrolly">
+
+      <div class="sticky-visual sticky-visual-dark">
+
+        <p class="visual-label light">Fig. — Global temperature response (illustrative)</p>
+
+        <svg class="trace-svg" viewBox="0 0 1000 750" role="img" aria-label="Asymmetric temperature response to positive and negative CO2">
+
+          <line x1="100" y1="350" x2="900" y2="350" class="axis-line light" />
+
+          <text x="90" y="58" text-anchor="end" class="svg-tick light">+1.5°C</text>
+          <text x="90" y="655" text-anchor="end" class="svg-tick light">−1.5°C</text>
+
+          <path class="layer draw-path temp-line" data-layer="pos-temp" d="M 500 350 C 590 320, 690 220, 840 150" />
+          <path class="layer draw-path temp-line-neg" data-layer="neg-temp" d="M 500 350 C 590 400, 690 550, 840 650" />
+
+          <path class="layer draw-path mirror-path" data-layer="mirror" d="M 500 350 C 590 380, 690 480, 840 550" />
+
+          <path class="layer shade-path" data-layer="shade"
+            d="M500,350 C590,380 690,480 840,550 L840,650 C690,550 590,400 500,350 Z" />
+
+          <text x="850" y="140" class="svg-label label-positive layer" data-layer="pos-temp">+1°C</text>
+          <text x="850" y="672" class="svg-label label-negative layer" data-layer="neg-temp">−1.5°C</text>
+          <text x="850" y="565" class="svg-label label-ghost layer" data-layer="mirror">mirror of +1°C</text>
+
+        </svg>
+
+        <p class="scrolly-caption light" data-caption>The CO₂ trajectories were symmetric.</p>
+
+      </div>
+
+      <div class="scroll-steps">
+
+        <article class="scroll-step" data-step="0" data-show="" data-caption-text="The CO₂ trajectories were symmetric.">
+          <p class="step-number">01</p>
+          <h3>What happened?</h3>
+          <p>The CO₂ trajectories were symmetric.</p>
+        </article>
+
+        <article class="scroll-step" data-step="1" data-show="pos-temp" data-caption-text="Warming: +1°C.">
+          <p class="step-number">02</p>
+          <h3>Positive emissions warmed the climate by +1°C.</h3>
+          <p>A clear, expected warming response.</p>
+        </article>
+
+        <article class="scroll-step" data-step="2" data-show="pos-temp,neg-temp" data-caption-text="Cooling: −1.5°C.">
+          <p class="step-number">03</p>
+          <h3>Negative emissions cooled it by −1.5°C.</h3>
+          <p>A bigger swing than the warming, not a mirror image.</p>
+        </article>
+
+        <article class="scroll-step" data-step="3" data-show="pos-temp,neg-temp,mirror,shade" data-caption-text="…therefore, climate change was not.">
+          <p class="step-number">04</p>
+          <h3>…therefore, climate change was not symmetric.</h3>
+          <p>The dashed line shows where −1.5°C "should" have landed if the response simply mirrored the warming. The shaded gap is the asymmetry.</p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <div class="glossary-zone">
+
+
+    <!-- ============================================================
+         07 — BRIDGE
+         ============================================================ -->
+
+    <section class="content-panel content-panel-tight reveal">
+      <p class="kicker">A complication</p>
+      <h2>
+        In the real world, land and ocean carbon respond to
+        both CO₂ and the temperature it causes — so we ran two
+        more experiments to disentangle them.
+      </h2>
+    </section>
+
+
+
+    <!-- ============================================================
+         08 — RESULT Ib: BGC MODE (CO2-only)
+         ============================================================ -->
+
+    <section class="scrolly layered-scrolly" id="bgcScrolly">
+
+      <div class="sticky-visual">
+
+        <p class="visual-label">Fig. — Land &amp; ocean carbon, <button class="term" data-term="BGC">BGC mode</button> (GtC)</p>
+
+        <div class="bar-diagram">
+
+          <div class="bar-group">
+            <p class="bar-group-label">Land</p>
+            <div class="bar-axis">
+              <span class="bar-zero"></span>
+              <div class="bar-fill layer dir-up" data-layer="land" style="--h:91px; left:8px; right:auto; width:38px;"></div>
+              <div class="bar-fill layer dir-down bar-neg" data-layer="land" style="--h:140px; left:56px; width:38px;"></div>
+              <div class="bar-mirror layer dir-down" data-layer="land-mirror" style="--h:91px; left:56px; width:38px;"></div>
+              <div class="bar-shade layer" data-layer="land-shade" style="left:56px; width:38px; top:241px; height:49px;"></div>
+              <span class="bar-value bar-value-up layer" data-layer="land" style="bottom:249px; left:8px; width:38px;">+165</span>
+              <span class="bar-value bar-value-down layer" data-layer="land" style="top:298px; left:56px; width:38px;">−255</span>
+            </div>
+          </div>
+
+          <div class="bar-group">
+            <p class="bar-group-label">Ocean</p>
+            <div class="bar-axis">
+              <span class="bar-zero"></span>
+              <div class="bar-fill layer dir-up" data-layer="ocean" style="--h:69px; left:8px; width:38px;"></div>
+              <div class="bar-fill layer dir-down bar-neg" data-layer="ocean" style="--h:99px; left:56px; width:38px;"></div>
+              <div class="bar-mirror layer dir-down" data-layer="ocean-mirror" style="--h:69px; left:56px; width:38px;"></div>
+              <div class="bar-shade layer" data-layer="ocean-shade" style="left:56px; width:38px; top:219px; height:30px;"></div>
+              <span class="bar-value bar-value-up layer" data-layer="ocean" style="bottom:227px; left:8px; width:38px;">+125</span>
+              <span class="bar-value bar-value-down layer" data-layer="ocean" style="top:257px; left:56px; width:38px;">−180</span>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="scrolly-caption" data-caption>Same CO₂ change, temperature switched off.</p>
+
+      </div>
+
+      <div class="scroll-steps">
+
+        <article class="scroll-step" data-step="0" data-show="" data-caption-text="CO₂ only — temperature switched off.">
+          <p class="step-number">01</p>
+          <h3>Let's switch off the temperature change.</h3>
+          <p>Land and ocean carbon stocks now only experience symmetric changes in CO₂ — this is the <button class="term" data-term="BGC">BGC mode</button>.</p>
+        </article>
+
+        <article class="scroll-step" data-step="1" data-show="land" data-caption-text="Land carbon: +165 vs −255 GtC.">
+          <p class="step-number">02</p>
+          <h3>Land carbon: +165 vs −255 GtC.</h3>
+          <p>Measured in billions of metric tonnes of carbon (GtC). Not a mirror image.</p>
+        </article>
+
+        <article class="scroll-step" data-step="2" data-show="land,ocean" data-caption-text="Ocean carbon: +125 vs −180 GtC.">
+          <p class="step-number">03</p>
+          <h3>Ocean carbon: +125 vs −180 GtC.</h3>
+          <p>The CO₂ trajectories were symmetric… the carbon changes were not.</p>
+        </article>
+
+        <article class="scroll-step" data-step="3" data-show="land,ocean,land-mirror,land-shade,ocean-mirror,ocean-shade" data-caption-text="But why?">
+          <p class="step-number">04</p>
+          <h3>But why?</h3>
+          <p>
+            As CO₂ rises, the CO₂-fertilization effect on plants saturates —
+            growth slows down. As CO₂ falls, there's no equivalent saturation,
+            so land can lose carbon faster than it gains it.
+          </p>
+          <p>
+            As CO₂ rises, the ocean's capacity to buffer CO₂ taken up
+            declines; as it falls, buffer capacity increases more —
+            so the ocean also loses carbon faster than it takes it up.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================================================
+         09 — CONCENTRATION-CARBON FEEDBACK (merged)
+         ============================================================ -->
+
+    <section class="content-panel reveal">
+
+      <p class="kicker">What do we see</p>
+      <h2>
+        Any CO₂ increase is countered by land and ocean uptake.
+        Any CO₂ decrease is countered by land and ocean release.
+      </h2>
+      <p class="body-copy">
+        This is known as the <button class="term" data-term="concentration-carbon">concentration-carbon feedback</button> —
+        and it can be measured with a metric called <strong>beta (β)</strong>:
+        the sensitivity of land and ocean carbon stocks to CO₂ change,
+        in billion metric tonnes of carbon (GtC) per ppm.
+      </p>
+
+      <div class="feedback-box">
+
+        <div class="feedback-col">
+          <p class="feedback-side">Increasing CO₂</p>
+          <p class="feedback-number">1.03</p>
+          <p class="feedback-unit">GtC / ppm</p>
+        </div>
+
+        <div class="feedback-col feedback-col-neg">
+          <p class="feedback-side">Decreasing CO₂</p>
+          <p class="feedback-number">1.60</p>
+          <p class="feedback-unit">GtC / ppm</p>
+        </div>
+
+      </div>
+
+      <p class="plain-language">
+        In plain terms: removing CO₂ from the air leads to more carbon
+        release from the land and ocean than emitting the same amount
+        leads to land and ocean carbon uptake.
+      </p>
+
+      <p class="body-copy">
+        The change in CO₂ is identical in size — only the direction flips —
+        yet the feedback is stronger with declining CO₂.
+      </p>
+
+    </section>
+
+
+
+    <!-- ============================================================
+         10 — RESULT IIa: RAD MODE (temperature-only)
+         ============================================================ -->
+
+    <section class="scrolly layered-scrolly" id="radScrolly">
+
+      <div class="sticky-visual sticky-visual-dark">
+
+        <p class="visual-label light">Fig. — Land &amp; ocean carbon, <button class="term" data-term="RAD">RAD mode</button> (GtC)</p>
+
+        <div class="bar-diagram">
+
+          <div class="bar-group">
+            <p class="bar-group-label light">Land</p>
+            <div class="bar-axis">
+              <span class="bar-zero light"></span>
+              <div class="bar-fill layer dir-down" data-layer="land2" style="--h:122px; left:8px; width:38px; background:var(--blue-600);"></div>
+              <div class="bar-fill layer dir-up bar-neg" data-layer="land2" style="--h:140px; left:56px; width:38px; background:var(--grey-500);"></div>
+              <div class="bar-mirror layer dir-up light" data-layer="land2-mirror" style="--h:122px; left:56px; width:38px;"></div>
+              <div class="bar-shade layer light" data-layer="land2-shade" style="left:56px; width:38px; bottom:272px; height:18px;"></div>
+              <span class="bar-value bar-value-down light layer" data-layer="land2" style="top:280px; left:8px; width:38px;">−90.1</span>
+              <span class="bar-value bar-value-up light layer" data-layer="land2" style="bottom:298px; left:56px; width:38px;">+103</span>
+            </div>
+          </div>
+
+          <div class="bar-group">
+            <p class="bar-group-label light">Ocean</p>
+            <div class="bar-axis">
+              <span class="bar-zero light"></span>
+              <div class="bar-fill layer dir-down" data-layer="ocean2" style="--h:3px; left:8px; width:38px; background:var(--blue-600);"></div>
+              <div class="bar-fill layer dir-up bar-neg" data-layer="ocean2" style="--h:2px; left:56px; width:38px; background:var(--grey-500);"></div>
+              <div class="bar-mirror layer dir-up light" data-layer="ocean2-mirror" style="--h:3px; left:56px; width:38px;"></div>
+              <div class="bar-shade layer light" data-layer="ocean2-shade" style="left:56px; width:38px; bottom:152px; height:1px;"></div>
+              <span class="bar-value bar-value-down light layer" data-layer="ocean2" style="top:161px; left:8px; width:38px;">−2</span>
+              <span class="bar-value bar-value-up light layer" data-layer="ocean2" style="bottom:160px; left:56px; width:38px;">+1.7</span>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="scrolly-caption light" data-caption>Temperature only — CO₂ switched off.</p>
+
+      </div>
+
+      <div class="scroll-steps">
+
+        <article class="scroll-step" data-step="0" data-show="" data-caption-text="Temperature only — CO₂ switched off.">
+          <p class="step-number">01</p>
+          <h3>Now let's switch off the CO₂ change.</h3>
+          <p>Land and ocean carbon stocks only experience the temperature change — the <button class="term" data-term="RAD">RAD mode</button>. Remember: temperature changes are already asymmetric (+1°C vs −1.5°C).</p>
+        </article>
+
+        <article class="scroll-step" data-step="1" data-show="land2" data-caption-text="Land carbon: −90.1 vs +103 GtC.">
+          <p class="step-number">02</p>
+          <h3>Land carbon: −90.1 vs +103 GtC.</h3>
+          <p>Warming makes land lose carbon; cooling makes it gain more.</p>
+        </article>
+
+        <article class="scroll-step" data-step="2" data-show="land2,ocean2" data-caption-text="Ocean carbon: −2 vs +1.7 GtC.">
+          <p class="step-number">03</p>
+          <h3>Ocean carbon: −2 vs +1.7 GtC.</h3>
+          <p>The temperature trajectories were asymmetric — and so were the carbon changes.</p>
+        </article>
+
+        <article class="scroll-step" data-step="3" data-show="land2,ocean2,land2-mirror,land2-shade,ocean2-mirror,ocean2-shade" data-caption-text="But why?">
+          <p class="step-number">04</p>
+          <h3>But why?</h3>
+          <p>
+            As temperature rises, plant respiration increases and
+            <button class="term" data-term="NPP">net primary production</button> (NPP) declines,
+            decreasing land carbon stocks. As temperature falls more, less
+            energy is needed for respiration, so NPP rises more, and even
+            more carbon is sequestered by the land.
+          </p>
+          <p>
+            Ocean circulation strengthens more under cooling than it weakens
+            under warming, which on its own would favor greater carbon loss
+            under cooling than carbon gain under warming, as stronger
+            circulation is more efficient at transferring carbon from the
+            deep ocean to the surface ocean where it is released to the
+            atmosphere.
+          </p>
+          <p>
+            However, CO₂ solubility in seawater rises more with cooling
+            than it falls with warming, favouring more carbon uptake with
+            cooling. This effect dominates, and overall, the ocean loses
+            more carbon with warming than it sequesters with cooling.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ============================================================
+         11 — CLIMATE-CARBON FEEDBACK (merged)
+         ============================================================ -->
+
+    <section class="content-panel reveal">
+
+      <p class="kicker">What do we see</p>
+      <h2>
+        Any warming is amplified by carbon loss from land and ocean.
+        Any cooling is amplified by carbon uptake into land and ocean.
+      </h2>
+      <p class="body-copy">
+        This is known as the <button class="term" data-term="climate-carbon">climate-carbon feedback</button> —
+        measured with a metric called <strong>gamma (γ)</strong>:
+        the sensitivity of land and ocean carbon stocks to temperature change,
+        in GtC per °C.
+      </p>
+
+      <div class="feedback-box">
+
+        <div class="feedback-col">
+          <p class="feedback-side">Warming</p>
+          <p class="feedback-number">−90</p>
+          <p class="feedback-unit">GtC / °C</p>
+        </div>
+
+        <div class="feedback-col feedback-col-neg">
+          <p class="feedback-side">Cooling</p>
+          <p class="feedback-number">−71</p>
+          <p class="feedback-unit">GtC / °C</p>
+        </div>
+
+      </div>
+
+      <p class="plain-language">
+        In plain terms: land and ocean carbon stocks react more strongly
+        to a degree of warming than to a degree of cooling.
+      </p>
+
+      <p class="body-copy">
+        Here the temperature changes themselves were asymmetric
+        (+1°C vs −1.5°C), which partly explains why these metrics
+        differ too — the feedback is stronger with warming.
+      </p>
+
+    </section>
+
+
+
+    <!-- ============================================================
+         12 — TCRE BRIDGE
+         ============================================================ -->
+
+    <section class="content-panel content-panel-tight reveal">
+      <p class="kicker">Bringing it together</p>
+      <h2>
+        The strengths of these feedbacks combined with two other metrics
+        into a key climate number: the
+        <button class="term" data-term="TCRE">transient climate response to cumulative emissions</button> (TCRE).
+      </h2>
+    </section>
+
+
+
+    <!-- ============================================================
+         13 — TCRE RESULT
+         ============================================================ -->
+
+    <section class="scrolly tcre-scrolly">
+
+      <div class="sticky-visual sticky-visual-dark">
+
+        <p class="visual-label light">Fig. — TCRE vs TCRR</p>
+
+        <div class="tcre-readout">
+
+          <div class="tcre-col">
+            <p class="tcre-tag">Positive emissions</p>
+            <p class="tcre-number tcre-warm">1.35</p>
+            <p class="tcre-unit">°C / trillion tonnes carbon</p>
+          </div>
+
+          <p class="tcre-vs">versus</p>
+
+          <div class="tcre-col">
+            <p class="tcre-tag">Negative emissions</p>
+            <p class="tcre-number tcre-cool">1.63</p>
+            <p class="tcre-unit">°C / trillion tonnes carbon</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="scroll-steps">
+
+        <article class="scroll-step">
+          <h3>What TCRE tells us</h3>
+          <p>
+            For a given temperature limit, TCRE gives the maximum total
+            emissions allowed (the total carbon budget). Subtract what's
+            already been emitted, and you get the remaining carbon budget.
+            Three metrics can be used to calculate the TCRE:
+          </p>
+        </article>
+
+        <article class="scroll-step">
+          <p class="step-number">a</p>
+          <h3>Feedback metrics</h3>
+          <p>Beta (β) and gamma (γ) — the numbers from the last two chapters.</p>
+        </article>
+
+        <article class="scroll-step">
+          <p class="step-number">b</p>
+          <h3>Climate sensitivity</h3>
+          <p>How much temperature change results per unit of CO₂ increase or decrease, under each direction.</p>
+        </article>
+
+        <article class="scroll-step">
+          <p class="step-number">c</p>
+          <h3><button class="term" data-term="airborne">Airborne</button> &amp; <button class="term" data-term="removal">removal</button> fraction</h3>
+          <p>How much of the CO₂ we emit stays in the atmosphere, and how much of the CO₂ we remove stays out of it.</p>
+        </article>
+
+        <article class="scroll-step">
+          <h3>This metric shapes real climate policy.</h3>
+          <p>TCRE-derived carbon budgets are already used to set emissions targets worldwide.</p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    </div> <!-- /.glossary-zone -->
+
+
+
+    <!-- ============================================================
+         14 — WHY THIS MATTERS
+         ============================================================ -->
+
+    <section class="content-panel content-panel-highlight reveal">
+
+      <p class="kicker">Why this matters</p>
+
+      <h2>
+        Reliance on feedback metrics derived only from positive-emission
+        scenarios can misrepresent how the Earth system actually responds
+        under net-negative CO₂ emissions.
+      </h2>
+
+      <p class="body-copy">
+        These misrepresentations can propagate into TCRE itself, resulting
+        in inaccurate carbon budget estimations.
+      </p>
+
+      <p class="caveat-line">
+        Limitations: we recommend that this experiment be repeated in
+        multi-model analyses, particularly with models including
+        physical climate feedbacks and explicit nitrogen–land coupling.
+      </p>
+
+    </section>
+
+
+
+    <!-- ============================================================
+         15 — END PAGE
+         ============================================================ -->
+
+    <footer class="panel panel-dark">
+
+      <div class="panel-copy footer-copy">
+
+        <p class="kicker">Read the research</p>
+
+        <h2>
+          Asymmetry in carbon cycle feedbacks and transient climate
+          response under positive and negative CO₂ emissions
+        </h2>
+
+        <p class="authors">V. Rachel Chimuka &amp; Kirsten Zickfeld</p>
+        <p class="publication">Biogeosciences · 23 · 6211–6228 · 2026</p>
+
+        <div class="footer-links">
+          <a href="https://bg.copernicus.org/articles/23/6211/2026/" target="_blank" rel="noopener">Read the paper →</a>
+          <a href="https://bg.copernicus.org/articles/23/6211/2026/bg-23-6211-2026-supplement.pdf" target="_blank" rel="noopener">Supplement →</a>
+        </div>
+
+        <p class="institution">Simon Fraser University · Department of Geography</p>
+
+      </div>
+
+    </footer>
+
+
+  </main>
+
+
+  <!-- ============================================================
+       GLOSSARY PANEL
+       ============================================================ -->
+
+  <button class="glossary-chip" id="glossaryChip" type="button" aria-expanded="false" aria-controls="glossaryPanel">
+    <span>?</span> Glossary
+  </button>
+
+  <div class="glossary-panel" id="glossaryPanel" role="dialog" aria-label="Glossary of terms">
+
+    <div class="glossary-panel-header">
+      <p>Glossary</p>
+      <button class="glossary-close" id="glossaryClose" type="button" aria-label="Close glossary">✕</button>
+    </div>
+
+    <dl class="glossary-list">
+
+      <div data-term-def="BGC">
+        <dt>BGC mode</dt>
+        <dd>A version of the model where the temperature response is turned off, so land and ocean only feel the CO₂ change, not the warming or cooling it causes.</dd>
+      </div>
+
+      <div data-term-def="RAD">
+        <dt>RAD mode</dt>
+        <dd>A version of the model where the CO₂ change itself is turned off, so land and ocean only feel the resulting temperature change.</dd>
+      </div>
+
+      <div data-term-def="concentration-carbon">
+        <dt>Concentration-carbon feedback (β)</dt>
+        <dd>How strongly land and ocean carbon stocks respond to a change in atmospheric CO₂ concentration alone.</dd>
+      </div>
+
+      <div data-term-def="climate-carbon">
+        <dt>Climate-carbon feedback (γ)</dt>
+        <dd>How strongly land and ocean carbon stocks respond to a change in global temperature alone.</dd>
+      </div>
+
+      <div data-term-def="NPP">
+        <dt>NPP — Net Primary Production</dt>
+        <dd>The net rate at which plants build new biomass, after accounting for their own respiration.</dd>
+      </div>
+
+      <div data-term-def="AMOC">
+        <dt>AMOC</dt>
+        <dd>The Atlantic Meridional Overturning Circulation — a major ocean current system that moves heat and carbon between the surface and deep ocean.</dd>
+      </div>
+
+      <div data-term-def="TCRE">
+        <dt>TCRE</dt>
+        <dd>Transient Climate Response to cumulative carbon Emissions — degrees of warming per trillion tonnes of carbon emitted. Under negative emissions, this study calls it TCRR (the "R" for removed).</dd>
+      </div>
+
+      <div data-term-def="airborne">
+        <dt>Airborne fraction</dt>
+        <dd>The share of emitted CO₂ that stays in the atmosphere rather than being absorbed by land or ocean.</dd>
+      </div>
+
+      <div data-term-def="removal">
+        <dt>Removal fraction</dt>
+        <dd>The share of removed CO₂ that stays out of the atmosphere rather than being replaced by land or ocean release.</dd>
+      </div>
+
+    </dl>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
